@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function factory(name){
+        this.name = name
+    }
+
+    function Factory(name){
+        this.name = name
+    }
+    let a = new factory('这是factory构造函数的实例')
+    let b = new Factory('这是Factory构造函数的实例')
+
+    console.log(a)
+    console.log(b)
+
+
+    function Test1(name){
+        this.name = name
+    }
+    let d = new Test1('这是Test1构造函数')
+    console.log(d)
+
+
+    function Test2(){
+        return '这是test2构造函数'
+    }
+
+    let c = new Test2()
+    console.log(c)
+
+
+    function Test3(){
+        let obj = {
+            name: '这是Test3构造函数'
+        }
+        return obj
+    }
+    let test3 = new Test3()
+    console.log(test3)
+
+    function Test4(){
+        this.name = 'this的name:这是Test4构造函数'
+        let obj ={
+            name: '这是Test4构造函数'
+        }
+        return obj
+    }
+
+    let test4 = new Test4()
+    console.log(test4)
+    //
+    function Test5(){
+        this.name = '这是Test1构造函数5'
+        return this
+    }
+
+    let test5 = new Test5()
+    console.log(test5)
+
+    function Test6(){
+        let obj = {
+            name:'这是Test6构造函数'
+        }
+        return obj
+    }
+
+    let test6 = new Test6()
+    console.log(test6)
+
+
+    console.dir(Test5)
+
+
+
+
+</script>
+</body>
+</html>
