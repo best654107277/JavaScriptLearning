@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    const arr = [1,[2,[3,[4]]],6]
+
+
+    // 方法1: 使用flat
+    // res1 = arr.flat(Infinity)
+
+
+    // 方法2:利用正则,但数据会变为字符串
+    // const res1 = JSON.stringify(arr).replace(/\[|\]/g,'').split(',')
+
+    // 方法3:正则改良版
+    // const res1 = JSON.parse('['+JSON.stringify(arr).replace(/\[|\]/g,'')+']')
+
+    // 方法4:使用reduce
+    // const flatten = arr =>{
+    //     return arr.reduce((pre,cur)=>{
+    //         return pre.concat(Array.isArray(cur) ? flatten(cur) : cur)
+    //     },[])
+    // }
+    // const res1 = flatten(arr)
+
+    // 方法5:函数递归
+    // const res = [];
+    // const fn = arr =>{
+    //     for (let i = 0; i < arr.length; i++) {
+    //         if(Array.isArray(arr[i])){
+    //             fn(arr[i])
+    //         }else{
+    //             res.push(arr[i])
+    //         }
+    //     }
+    // }
+    // fn(arr)
+    // console.log(res)
+
+    // console.log(res1)
+
+
+
+
+
+</script>
+</body>
+</html>
