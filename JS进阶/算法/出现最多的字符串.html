@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    //创建一个空对象
+
+    function getMax(str){
+    let json = {};
+        for (let i = 0; i < str.length; i++) {
+            // if(!json[str.charAt(i)]){
+            //     //如果不存在, 添加到json对象中
+            //     json[str.charAt(i)] = 1
+            // }else{
+            //     //如果存在 value加1
+            //     json[str.charAt(i)]++
+            // }
+            !json[str.charAt(i)] ? json[str.charAt(i)] = 1 : json[str.charAt(i)]++
+        }
+        console.log(json);
+        let maxChar = ''
+        let maxNuma = 0
+
+        //遍历json对象
+        for(let key in json){
+            if(json[key] > maxNuma){
+                //让当前的内容更新
+                maxChar = key
+                maxNuma = json[key]
+            }
+        }
+        //返回值
+        return '出现最多的值是:'+ maxChar +'\n出现的次数为:'+ maxNuma
+    }
+
+    let str = 'sasdnwlkjanfjsnfkjnblkjwdnaklfna'
+    let result = getMax(str)
+    console.log(result);
+
+</script>
+
+</body>
+</html>

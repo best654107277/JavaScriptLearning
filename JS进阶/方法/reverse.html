@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    // let str = 'abcdefg'
+    // function reverseStr (str){
+    //     return str.split('').reverse().join('')
+    // }
+    // let res = reverseStr(str)
+    // console.log(res)
+
+    function Stack(){
+        this.data = [] //保存栈内元素
+        this.top = 0; //记录栈顶的位置
+    }
+
+    //在栈的原型链上添加方法
+    Stack.prototype = {
+        push: function push(element){
+            this.data[this.top++] = element
+        },
+        pop:function(){
+            return this.data[--this.top]
+        },
+        length:function(){
+            this.top
+        }
+    }
+
+    function reverseString(str){
+        //创建一个stack的实例
+        let stack = new Stack
+
+        //将字符串转换成数组
+        let arr = str.split('')
+
+        //存储转换后的数据
+        let result = ''
+
+        //数组的长度
+        let len = arr.length
+
+        //将元素压入栈内
+        for(let i = 0; i < len; i++){
+            stack.push(arr[i])
+        }
+
+        //将元素输出
+        for(let j = 0 ; j < len; j++ ){
+           result += stack.pop(j)
+        }
+        return result
+    }
+
+    let str = 'abcdefg123'
+    let  newStr = reverseString((str))
+    console.log(newStr);
+
+
+</script>
+
+</body>
+</html>

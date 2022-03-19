@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    function reverseString(str,len,strOut){
+        if(len<0)return strOut //终止条件
+
+        strOut += str.charAt(len--)
+
+        return reverseString(str,len,strOut)
+
+    }
+    let str = 'abcdefg'
+    let result = ''
+    let newStr = reverseString(str,str.length-1,result)
+    console.log(newStr)
+
+
+</script>
+
+</body>
+</html>

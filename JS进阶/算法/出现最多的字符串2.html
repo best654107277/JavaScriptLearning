@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    function getMax(str){
+
+
+        let defaultNum = 0
+        let defaultChar = ''
+
+        //字符串处理成数组后进行排序, 再处理成字符串
+        let newStr = str.split('').sort().join('')
+        // console.log(newStr)
+
+        for (let i = 0; i < newStr.length; i++) {
+            let char = newStr[i]
+            // console.log(char);
+            let lastChar = newStr.lastIndexOf(char)-i+1
+            // console.log(lastChar);
+
+
+
+            //判断出现次数最大值比较
+            if(lastChar > defaultNum){
+                defaultNum = lastChar
+                defaultChar = char
+            }
+
+            //变更索引位置
+            i = newStr.lastIndexOf(char)
+        }
+        return '出现最多的值是:'+defaultChar+'\n出现的次数为:'+defaultNum
+    }
+
+    let str = 'sasdnwlkjanfjsnfkjnblkjwdnaklfna'
+    let result = getMax(str)
+    console.log(result);
+
+</script>
+
+</body>
+</html>
