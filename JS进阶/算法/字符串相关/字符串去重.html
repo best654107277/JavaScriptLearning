@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    function deduplication(str){
+        // 创建对象
+        let json = {}
+        // 创建数组
+        let result = []
+        // 遍历循环 将单独的字符添加到对象中
+        for (let i = 0; i < str.length; i++) {
+            if(!json[str[i]]){
+                json[str[i]] = true
+                result.push(str[i])
+            }
+        }
+        console.log(json);
+        //将数组转换成字符串
+        return result.join('')
+
+    }
+
+    let str = 'sadfhofjknasolfkjnameolf'
+    newStr = deduplication(str)
+    console.log(newStr);
+
+
+</script>
+</body>
+</html>
