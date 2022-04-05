@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //闭包的例子
+    // let Stack = (function(){
+    //     let arr = []
+    //     return {
+    //         push:function(value){
+    //             arr.push(value)
+    //         },
+    //         pop:function(){
+    //             return arr.pop()
+    //         },
+    //         size:function(){
+    //             return arr.length
+    //         }
+    //
+    //     }
+    // })()
+    // Stack.push('abc')
+    // Stack.push('efg')
+    // console.log(Stack.size());
+    // console.log(Stack.pop());
+    // console.log(Stack.size());
+
+
+
+
+    // ES5之前的处理方法
+    // let arr = ['one','two','three']
+    // for (var i = 0; i < arr.length; i++) {
+    //     (function(time){
+    //         setTimeout(function(){
+    //             console.log(arr[time])
+    //         },time*1000)
+    //     })(i)
+    // }
+
+
+
+
+</script>
+</body>
+</html>

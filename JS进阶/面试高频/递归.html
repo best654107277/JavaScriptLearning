@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button id="id">点击</button>
+<script>
+
+    //闭包的例子
+    // let cacheMemory = (function(){
+    //     //定义缓存容器
+    //     let cache = {}
+    //     return {
+    //         set:function(id){
+    //             //如果在内存中就直接返回
+    //             if(id in cache){
+    //                 return `缓存的结果是id: ${cache[id]}`
+    //             }
+    //             //如果内存中没有就要查询
+    //             cache[id] = fn(id)
+    //             return `查找结果是id:${cache[id]}`
+    //         }
+    //     }
+    // })()
+    //
+    // function fn(id){
+    //     console.log('很耗时间的数据库操作')
+    //     return id
+    // }
+    //
+    // let id = document.querySelector('#id')
+    // id.addEventListener('click',(e)=>{
+    //     console.log(cacheMemory.set(1));
+    // })
+
+
+
+
+</script>
+</body>
+</html>

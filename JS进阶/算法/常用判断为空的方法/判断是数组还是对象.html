@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+
+    function getDataType(ao){
+        if(ao instanceof Array){
+            return 'Array'
+        }else if(ao instanceof Object){
+            return 'Object'
+        }else{
+            return '非数组非对象'
+        }
+    }
+
+    let obj = ''
+    console.log(getDataType(obj));
+
+
+</script>
+</body>
+</html>

@@ -31,17 +31,20 @@
     // const res1 = flatten(arr)
 
     // 方法5:函数递归
-    // const res = [];
-    // const fn = arr =>{
-    //     for (let i = 0; i < arr.length; i++) {
-    //         if(Array.isArray(arr[i])){
-    //             fn(arr[i])
-    //         }else{
-    //             res.push(arr[i])
-    //         }
-    //     }
-    // }
-    // fn(arr)
+    let arr = [1,[2,[3,[4]]],6]
+    let res = [];
+    let fn = arr =>{
+        for (let i = 0; i < arr.length; i++) {
+            if(Array.isArray(arr[i])){
+                fn(arr[i])
+            }else{
+                res.push(arr[i])
+            }
+        }
+    }
+    fn(arr)
+
+
     // console.log(res)
 
     // console.log(res1)

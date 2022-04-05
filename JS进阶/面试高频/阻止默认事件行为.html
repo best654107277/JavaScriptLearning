@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<div id="tip">
+
+</div>
+<script>
+  let input = document.querySelector('#input')
+  let tip = document.querySelector('#tip')
+
+  input.addEventListener('keypress',e=>{
+      //不同浏览器的兼容unicode获取方式
+      let charcode = e.keyCode || e.which || e.charCode
+      // console.log(charcode);
+
+      let shuzi = charcode >= 48 && charcode <=57
+      let lower = charcode >= 97 && charcode <=122
+      let upper = charcode >= 65 && charcode <=90
+
+      if (!shuzi && !lower &&!upper) {
+          //禁止用户输入
+          e.preventDefault()
+
+          tip.innerHTML = '输入有误'
+
+          setTimeout(()=>{
+              tip.innerHTML = ''
+          },2000)
+
+          console.log('输入有误')
+      }else{
+          console.log('正确输入')
+      }
+
+  })
+
+</script>
+</body>
+</html>
